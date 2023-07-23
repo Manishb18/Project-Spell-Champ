@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: -10;
+    animation: body-fade-in-anime 1s linear forwards;
+}
+
+@keyframes body-fade-in-anime {
+    0%, 50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero-con {
+    /* position: relative; */
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(185, 185, 185, 0.066);
+    z-index: -5;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-div {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(255, 0, 0, 0.095); */
+}
+
+.meaning-div {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-div {
+    /* background-color: rgba(152, 237, 237, 0.232); */
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.lower-div {
+    /* background-color: rgba(152, 237, 237, 0.232); */
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-box-div input {
+    width: 30px;
+    aspect-ratio: 1/1;
+    margin: 100px 4px;
+    z-index: 2;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid grey;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+#ip2 {
+    display: none;
+}
+
+#ip13 {
+    display: none;
+}
+
+#ip14 {
+    display: none;
+}
+
+#ip15 {
+    display: none;
+}
+
+#ip16 {
+    display: none;
+}
+
+#ip17 {
+    display: none;
+}
+
+#ip18 {
+    display: none;
+}
+
+#ip19 {
+    display: none;
+}
+
+.neon-btns {
+    font-size: 1.1rem;
+    font-family: "Nunito";
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+    /* border: #14f7ff 0.125em solid; */
+    border: 0;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow:
+        0 0 .20em #FFF7,
+        0 0 .30em #14f7ff;
+    box-shadow: 0px 0px 15px #14f7ff;
+    transition: 0.5s;
+}
+
+.neon-btns:hover {
+    background-color: #14f7ff;
+    box-shadow: 0px 0px 25px #14f7ff;
+}
+
+.get-word-div button {
+    position: absolute;
+    transform: translate(40%, 150%);
+    scale: 3;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.upper-div>button, .lower-div>button, .input-box-div>input {
+    opacity: 0;
+}
+
+.glow-effect {
+    animation: glow-anime 20s linear infinite;
+    text-shadow: none;
+    letter-spacing: 0.08rem;
+}
+
+.glow-effect:hover {
+    box-shadow: 0px 0px 30px #14f7ff;
+}
+
+@keyframes glow-anime {
+    0%, 100% {
+        color: rgb(4, 255, 0);
+    }
+
+    20% {
+        color: rgb(255, 0, 247);
+    }
+
+    40% {
+        color: rgb(217, 255, 0);
+    }
+
+    60% {
+        color: rgb(255, 0, 0);
+    }
+
+    80% {
+        color: rgb(191, 0, 255);
+    }
+}
+
+/* Background Animations */
+
+.back-hero {
+    position: absolute;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.back-effect-blur-layer {
+    /* filter: blur(10px); */
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.back-effect-con {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tetris-block-one {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.523);
+    filter: blur(5px);
+}
+
+.tetris-block-two {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(26, 255, 0, 0.523);
+    filter: blur(5px);
+}
+
+.tetris-block-three {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(64, 0, 255, 0.523);
+    filter: blur(5px);
+}
+
+.tetris-block-four {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 0, 221, 0.523);
+    filter: blur(5px);
+}
+
+.tetris-1,
+.tetris-3,
+.tetris-5,
+.tetris-7,
+.tetris-9 {
+    animation: tetris-top-anime 5s linear infinite;
+}
+
+.tetris-2,
+.tetris-4,
+.tetris-6,
+.tetris-8,
+.tetris-10 {
+    animation: tetris-bottom-anime 5s linear infinite;
+}
+
+@keyframes tetris-top-anime {
+    0%, 100% {
+        transform: translateY(-100px);
+    }
+
+    50% {
+        transform: translateY(800px);
+    }
+}
+
+@keyframes tetris-bottom-anime {
+    0%, 100% {
+        transform: translateY(800px);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+.tetris-1 {
+    animation-duration: 14s;
+    margin-top: 300px;
+}
+
+.tetris-2 {
+    animation-duration: 10s;
+}
+
+.tetris-3 {
+    animation-duration: 8s;
+}
+
+.tetris-4 {
+    animation-duration: 13s;
+}
+
+.tetris-5 {
+    animation-duration: 10s;
+}
+
+.tetris-6 {
+    animation-duration: 9s;
+}
+
+.tetris-7 {
+    animation-duration: 11s;
+}
+
+.tetris-8 {
+    animation-duration: 7s;
+}
+
+.tetris-9 {
+    animation-duration: 10s;
+}
+
+.tetris-10 {
+    animation-duration: 13s;
+}
+
+.tetris-1>.tetris-block-one,
+.tetris-3>.tetris-block-one,
+.tetris-5>.tetris-block-one,
+.tetris-7>.tetris-block-one,
+.tetris-9>.tetris-block-one {
+    transform: translateX(-50px);
+}
+
+.tetris-1>.tetris-block-two,
+.tetris-3>.tetris-block-two,
+.tetris-5>.tetris-block-two,
+.tetris-7>.tetris-block-two,
+.tetris-9>.tetris-block-two {
+    transform: translateX(0px);
+}
+
+.tetris-1>.tetris-block-three,
+.tetris-3>.tetris-block-three,
+.tetris-5>.tetris-block-three,
+.tetris-7>.tetris-block-three,
+.tetris-9>.tetris-block-three {
+    transform: translateX(-50px);
+}
+
+.tetris-1>.tetris-block-four,
+.tetris-3>.tetris-block-four,
+.tetris-5>.tetris-block-four,
+.tetris-7>.tetris-block-four,
+.tetris-9>.tetris-block-four {
+    transform: translateX(0px);
+}
+
+.tetris-2>.tetris-block-one,
+.tetris-4>.tetris-block-one,
+.tetris-6>.tetris-block-one,
+.tetris-8>.tetris-block-one,
+.tetris-10>.tetris-block-one {
+    transform: translateX(0px);
+}
+
+.tetris-2>.tetris-block-two,
+.tetris-4>.tetris-block-two,
+.tetris-6>.tetris-block-two,
+.tetris-8>.tetris-block-two,
+.tetris-10>.tetris-block-two {
+    transform: translateX(-50px);
+}
+
+.tetris-2>.tetris-block-three,
+.tetris-4>.tetris-block-three,
+.tetris-6>.tetris-block-three,
+.tetris-8>.tetris-block-three,
+.tetris-10>.tetris-block-three {
+    transform: translateX(0px);
+}
+
+.tetris-2>.tetris-block-four,
+.tetris-4>.tetris-block-four,
+.tetris-6>.tetris-block-four,
+.tetris-8>.tetris-block-four,
+.tetris-10>.tetris-block-four {
+    transform: translateX(-50px);
+}
+
+#actual-word {
+    display: none;
+}
+
+#meaning-para {
+    margin-inline: 50px;
+    font-size: 1.1rem;
+}
+
+#reveal-btn:hover {
+    background-color: red;
+    box-shadow: 0px 0px 20px red;
+    text-shadow: none;
+    color: white;
+}

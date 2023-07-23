@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SpellChamp | Main</title>
+    <link rel="stylesheet" href="./mainpage.css">
+    <script>
+        function keyPress(prev, curr, next) {
+            if (event.key == "Backspace" || event.keyCode == 37){
+                document.getElementById("ip"+prev).focus();
+            }
+            else{
+                document.getElementById("ip"+next).focus();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="hero-con">
+        <div class="hero">
+            <div class="container-div">
+                <div class="upper-div">
+                    <div class="get-word-div">
+                        <button class="neon-btns position-change-anime glow-effect" onclick="getWord()">GET A WORD</button>
+                    </div>
+                    <button class="neon-btns opacity-change-anime" onclick="sayWord()">SAY WORD</button>
+                    <button class="neon-btns opacity-change-anime" onclick="changeVoice()">CHANGE VOICE</button>
+                </div>
+                <div class="input-box-div">
+                    <input type="text" class="input-box opacity-change-anime 1" id="ip1" maxlength="1" onkeyup="keyPress(0, 1, 2)">
+                    <input type="text" class="input-box opacity-change-anime 2" id="ip2" maxlength="1" onkeyup="keyPress(1, 2, 3)">
+                    <input type="text" class="input-box opacity-change-anime 3" id="ip3" maxlength="1" onkeyup="keyPress(2, 3, 4)">
+                    <input type="text" class="input-box opacity-change-anime 4" id="ip4" maxlength="1" onkeyup="keyPress(3, 4, 5)">
+                    <input type="text" class="input-box opacity-change-anime 5" id="ip5" maxlength="1" onkeyup="keyPress(4, 5, 6)">
+                    <input type="text" class="input-box opacity-change-anime 6" id="ip6" maxlength="1" onkeyup="keyPress(5, 6, 7)">
+                    <input type="text" class="input-box opacity-change-anime 7" id="ip7" maxlength="1" onkeyup="keyPress(6, 7, 8)">
+                    <input type="text" class="input-box opacity-change-anime 8" id="ip8" maxlength="1" onkeyup="keyPress(7, 8, 9)">
+                    <input type="text" class="input-box opacity-change-anime 9" id="ip9" maxlength="1" onkeyup="keyPress(8, 9, 10)">
+                    <input type="text" class="input-box opacity-change-anime 10" id="ip10" maxlength="1" onkeyup="keyPress(9, 10, 11)">
+                    <input type="text" class="input-box opacity-change-anime 11" id="ip11" maxlength="1" onkeyup="keyPress(10, 11, 12)">
+                    <input type="text" class="input-box opacity-change-anime 12" id="ip12" maxlength="1" onkeyup="keyPress(11, 12, 13)">
+                    <input type="text" class="input-box opacity-change-anime 13" id="ip13" maxlength="1" onkeyup="keyPress(12, 13, 14)">
+                    <input type="text" class="input-box opacity-change-anime 14" id="ip14" maxlength="1" onkeyup="keyPress(13, 14, 15)">
+                    <input type="text" class="input-box opacity-change-anime 15" id="ip15" maxlength="1" onkeyup="keyPress(14, 15, 16)">
+                    <input type="text" class="input-box opacity-change-anime 16" id="ip16" maxlength="1" onkeyup="keyPress(15, 16, 17)">
+                    <input type="text" class="input-box opacity-change-anime 17" id="ip17" maxlength="1" onkeyup="keyPress(16, 17, 18)">
+                    <input type="text" class="input-box opacity-change-anime 18" id="ip18" maxlength="1" onkeyup="keyPress(17, 18, 19)">
+                    <input type="text" class="input-box opacity-change-anime 19" id="ip19" maxlength="1" onkeyup="keyPress(18, 19, 20)">
+                </div>
+                <div class="lower-div">
+                    <button class="neon-btns opacity-change-anime" onclick="getMeaning()">GET MEANING</button>
+                    <button class="neon-btns opacity-change-anime" value="VERIFY" id="verify-btn">VERIFY</button>
+                    <button class="neon-btns opacity-change-anime" onclick="revealWord()" id="reveal-btn">REVEAL WORD</button>
+                </div>
+            </div>
+            <div class="meaning-div">
+                <p id="actual-word"></p>
+                <p id="meaning-para"></p>
+            </div>
+            <div class="back-hero">
+            <div class="back-effect-blur-layer"></div>
+            <div class="back-effect-con">
+                <div class="tetris-con tetris-1">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+                <div class="tetris-con tetris-2">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+                <div class="tetris-con tetris-3">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+                <div class="tetris-con tetris-4">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+                <div class="tetris-con tetris-5">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+                <div class="tetris-con tetris-6">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+                <div class="tetris-con tetris-7">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+                <div class="tetris-con tetris-8">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+                <div class="tetris-con tetris-9">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+                <div class="tetris-con tetris-10">
+                    <div class="tetris-block-one"></div>
+                    <div class="tetris-block-two"></div>
+                    <div class="tetris-block-three"></div>
+                    <div class="tetris-block-four"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="./mainpage.js"></script>
+</body>
+</html>
